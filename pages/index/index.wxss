@@ -1,0 +1,7 @@
+/**index.wxss**/
+.main{
+  display: flex;
+  flex-direction: column;
+}
+
+

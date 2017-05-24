@@ -1,0 +1,27 @@
+<!--index.wxml-->
+<view class="main">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="info-area">
+      <view class="info__title">姓名：</view>
+      <input class="input" name="name" placeholder="please input here" type="text" auto-focus/>
+
+      <view class="info__title">电话：</view>
+      <input name="phone" placeholder="please input here" type="number" auto-focus/>
+
+      <view class="info__title">聚会日期：</view>
+      <radio-group class="radio-group" bindchange="radioChange">
+        <label class="Ratio：" wx:for="{{items}}">
+          <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+          <view class="换行">\n</view>
+        </label>
+      </radio-group>
+
+      <view class="info_title">聚会地点：南京 </view>
+    </view>
+
+    <view class="btn-area">
+      <button formType="submit">提交</button>
+      <button formType="reset">重置</button>
+    </view>
+  </form>
+</view>
