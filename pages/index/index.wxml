@@ -2,26 +2,45 @@
 <view class="main">
   <form bindsubmit="formSubmit" bindreset="formReset">
     <view class="info-area">
-      <view class="info__title">姓名：</view>
-      <input class="input" name="name" placeholder="please input here" type="text" auto-focus/>
+      <view class="section">
+        <view class="flex-wrp" style="display: flex;flex-direction:row;">
+          <view class="flex-item">
+            <label class="info-title" style="width:100px">姓名：</label>
+          </view>
+          <view class="flex-item">
+            <input class="input" name="name" placeholder="please input here" type="text" auto-focus/>
+          </view>
+        </view>
+      </view>
 
-      <view class="info__title">电话：</view>
-      <input name="phone" placeholder="please input here" type="number" auto-focus/>
+      <view class="section">
+        <view class="flex-wrp" style="display: flex;flex-direction:row;">
+          <view class="flex-item">
+            <label class="info-title">电话：</label>
+          </view>
+          <view class="flex-item">
+            <input class="input" name="name" placeholder="please input here" type="text" auto-focus/>
+          </view>
+        </view>
+      </view>
 
-      <view class="info__title">聚会日期：</view>
-      <radio-group class="radio-group" bindchange="radioChange">
-        <label class="Ratio：" wx:for="{{items}}">
-          <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
-          <view class="换行">\n</view>
-        </label>
-      </radio-group>
+      <view class="section">
+        <label class="info-title">聚会日期：</label>
+        <radio-group class="radio-group" bindchange="radioChange">
+          <label class="radio-label Ratio：" style="display: flex" wx:for="{{items}}">
+            <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+          </label>
+        </radio-group>
+      </view>
 
-      <view class="info_title">聚会地点：南京 </view>
+      <view class="section">
+        <view class="info-title">聚会地点：南京 </view>
+      </view>
     </view>
 
-    <view class="btn-area">
-      <button formType="submit">提交</button>
-      <button formType="reset">重置</button>
+    <view class="btn-area flex-wrp">
+      <button class="button" formType="submit">提交</button>
+      <button class="button reset" formType="reset" >重置</button>
     </view>
   </form>
 </view>
