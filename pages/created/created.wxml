@@ -1,2 +1,10 @@
 <!--Created.wxml-->
-<text>Created.wxml</text>
+<view class="banner">
+  <image class="img-banner" src="{{sub_ok}}" mode="{{mode}}"></image>
+</view>
+<view class="page-body">
+  <view class="page-section page-section-gap">
+    <map style="width: 100%; height: 300px;" latitude="{{latitude}}" longitude="{{longitude}}" markers="{{markers}}">
+    </map>
+  </view>
+</view>

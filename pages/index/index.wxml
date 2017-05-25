@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="banner">
-  <image class="img-banner" src="{{src}}" mode="{{mode}}"></image>
+  <image class="img-banner" src="{{logo}}" mode="{{mode}}"></image>
 </view>
 <view class="main">
   <form bindsubmit="formSubmit" bindreset="formReset">
@@ -33,7 +33,7 @@
             <label class="info-title">是否出席：</label>
           </view>
           <view class="switch">
-            <switch name="input_attend" checked bindchange="attend_switch" />
+            <switch name="input_attend" checked="{{will_attend}}" bindchange="attend_switch" />
           </view>
         </view>
       </view>
@@ -48,7 +48,7 @@
             <radio value="2017.7.15" checked="{{date_checked}}">"2017.7.15 - 2017.7.16"</radio>
           </label>
           <label class="radio-label Ratio：" style="display: flex">
-            <radio value="2017.7.15" >"2017.7.22 - 2017.7.23"</radio>
+            <radio value="2017.7.15">"2017.7.22 - 2017.7.23"</radio>
           </label>
         </radio-group>
       </view>

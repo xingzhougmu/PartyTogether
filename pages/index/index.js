@@ -8,11 +8,11 @@ Page({
       { name: '2017.7.15', value: '2017.7.15 - 2017.7.16', checked: 'true' },
       { name: '2017.7.22', value: '2017.7.22 - 2017.7.23' },
     ],
-    src: '../../resources/logo.png',
+    logo: '../../resources/logo.png',
     mode: "aspectFit",
-    pickerHidden: true,
-    chosen: '',
-    switch_status: 'checked',
+    // pickerHidden: true,
+    // chosen: '',
+    will_attend: true,
     date_checked: true,
 
   },
@@ -59,9 +59,10 @@ Page({
 
   formSubmit: function (e) {
     console.log('form发生了submit事件，携带数据为：')
-    console.log('form发生了submit事件，携带数据为：Name:', e.detail.value.input_name)
-    console.log('form发生了submit事件，携带数据为：Phone:', e.detail.value.input_phone)
-    console.log('form发生了submit事件，携带数据为：Date', e.detail.value.input_date)
+    console.log('form发生了submit事件，携带数据为：Name: ', e.detail.value.input_name)
+    console.log('form发生了submit事件，携带数据为：Phone: ', e.detail.value.input_phone)
+    console.log('form发生了submit事件，携带数据为：Attend: ', e.detail.value.input_attend)
+    console.log('form发生了submit事件，携带数据为：Date: ', e.detail.value.input_date)
     var _this = this
     /*********************    
     wx.redirectTo({
@@ -110,13 +111,18 @@ Page({
   formReset: function () {
     console.log('form发生了reset事件')
     this.setData({
-      date_checked: true
+      date_checked: true,
+      will_attend: true,
     })
-    
+
+    wx.redirectTo({
+      url: '../created/created'
+    })
+
   },
 
   radioChange: function () {
     console.log('radio 发生了change事件')
-    
+
   }
 })
