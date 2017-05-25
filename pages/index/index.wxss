@@ -32,8 +32,7 @@
 }
 
 .radio-group .radio-label {
-   padding-top: 5px;
-   padding-bottom: 5px;
+   line-height: 35px;
 }
 
 .btn-area {
