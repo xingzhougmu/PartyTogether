@@ -17,7 +17,7 @@
 
 .info-title {
   font-size: 15px;
-  font-weight: 550;
+  font-weight: bold;
   line-height: 25px;
 }
 
