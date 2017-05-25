@@ -17,7 +17,7 @@
 
 .info-title {
   font-size: 15px;
-  font-weight: 550;
+  font-weight: bold;
   line-height: 25px;
 }
 
@@ -29,6 +29,13 @@
   padding: 10px;
   margin-bottom: 20px;
   background-color: #FFF;
+}
+
+.view-section{
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #FFF;
+  align-items: center;
 }
 
 .radio-group .radio-label {
@@ -48,4 +55,11 @@
 .btn-area .button.reset {
   background-color: #c9302c;
   border-color: #c9302c;
+}
+
+.img-banner{
+  background-color:#FFF;
+  margin: auto;
+  display: block;
+  height: 110px;
 }
