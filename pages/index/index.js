@@ -12,8 +12,12 @@ Page({
     mode: "aspectFit",
     pickerHidden: true,
     chosen: '',
+    switch_status: 'checked',
+    date_checked: true,
+
   },
   //事件处理函数
+  /*
   pickerConfirm: function (e) {
     this.setData({
       pickerHidden: true
@@ -40,7 +44,7 @@ Page({
       url: '../logs/logs'
     })
   },
-
+*/
   onLoad: function () {
     console.log('onLoad')
     var that = this
@@ -106,11 +110,13 @@ Page({
   formReset: function () {
     console.log('form发生了reset事件')
     this.setData({
-      chosen: ''
+      date_checked: true
     })
+    
   },
 
   radioChange: function () {
     console.log('radio 发生了change事件')
+    
   }
 })

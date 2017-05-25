@@ -64,3 +64,7 @@
   display: block;
   height: 110px;
 }
+
+.switch{
+  padding-left: 20px;
+}
