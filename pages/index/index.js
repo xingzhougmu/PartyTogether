@@ -7,7 +7,9 @@ Page({
     items: [
       { name: 'OPT1', value: '2017.7.15 - 2017.7.16', checked: 'true'},
       { name: 'OPT2', value: '2017.7.22 - 2017.7.23' },
-    ]
+    ],
+    src: '../../resources/logo.png',
+    mode:"aspectFit",
   },
   //事件处理函数
   bindViewTap: function() {

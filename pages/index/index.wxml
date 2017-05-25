@@ -1,11 +1,14 @@
 <!--index.wxml-->
-<view class="main">
+ <view class="banner">
+    <image class="img-banner" src="{{src}}" mode="{{mode}}"></image>
+  </view>
+<view class="main"> 
   <form bindsubmit="formSubmit" bindreset="formReset">
     <view class="info-area">
       <view class="section">
         <view class="flex-wrp" style="display: flex;flex-direction:row;">
           <view class="flex-item">
-            <label class="info-title" style="width:100px">姓名：</label>
+            <label class="view-title" style="display: flex;flex-direction:row;">姓名：</label>
           </view>
           <view class="flex-item">
             <input class="input" name="name" placeholder="please input here" type="text" auto-focus/>
@@ -19,7 +22,7 @@
             <label class="info-title">电话：</label>
           </view>
           <view class="flex-item">
-            <input class="input" name="name" placeholder="please input here" type="text" auto-focus/>
+            <input class="input" name="phone" placeholder="please input here" type="number" auto-focus/>
           </view>
         </view>
       </view>
@@ -40,7 +43,7 @@
 
     <view class="btn-area flex-wrp">
       <button class="button" formType="submit">提交</button>
-      <button class="button reset" formType="reset" >重置</button>
+      <button class="button reset" formType="reset">重置</button>
     </view>
   </form>
 </view>
