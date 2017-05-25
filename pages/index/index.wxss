@@ -1,7 +1,52 @@
-/**index.wxss**/
-.main{
+.main {
   display: flex;
   flex-direction: column;
+  font-size: 15px;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  background-color: #f5f5f5;
 }
 
+.button {
+  border: 1px solid #4cae4c;
+  background-color: #5cb85c;
+  border-radius: 0px;
+  font-size: 15px;
+  color: #FFF;
+}
 
+.info-title {
+  font-size: 15px;
+  font-weight: 550;
+  line-height: 25px;
+}
+
+.info-area {
+  padding-top: 20px;
+}
+
+.info-area .section {
+  padding: 10px;
+  margin-bottom: 20px;
+  background-color: #FFF;
+}
+
+.radio-group .radio-label {
+   padding-top: 5px;
+   padding-bottom: 5px;
+}
+
+.btn-area {
+  display: flex;
+  flex-direction: row;
+  margin-top: 30px;
+}
+
+.btn-area .button {
+  width: 150px;
+}
+
+.btn-area .button.reset {
+  background-color: #c9302c;
+  border-color: #c9302c;
+}
