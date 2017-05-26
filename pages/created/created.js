@@ -7,6 +7,7 @@ Page({
   data: {
     sub_ok: '../../resources/subok.png',
     check_mark: '../../resources/check-mark.png',
+    complete: '../../resources/Complete.png',
     welcome_msg: '../../resources/welcome.png',
     mode: "aspectFit",
     latitude: 32.035225,
