@@ -10,41 +10,12 @@ Page({
     ],
     logo: '../../resources/logo.png',
     mode: "aspectFit",
-    // pickerHidden: true,
-    // chosen: '',
     will_attend: true,
     date_checked: true,
     input_name: '',
   },
+
   //事件处理函数
-  /*
-  pickerConfirm: function (e) {
-    this.setData({
-      pickerHidden: true
-    })
-    this.setData({
-      chosen: e.detail.value
-    })
-  },
-
-  pickerCancel: function (e) {
-    this.setData({
-      pickerHidden: true
-    })
-  },
-
-  pickerShow: function (e) {
-    this.setData({
-      pickerHidden: false
-    })
-  },
-
-  bindViewTap: function () {
-    wx.navigateTo({
-      url: '../logs/logs'
-    })
-  },
-*/
   onLoad: function () {
     console.log('onLoad')
     var that = this
@@ -124,9 +95,16 @@ Page({
       will_attend: true,
     })
 
-    wx.redirectTo({
-      url: '../failed/failed',
-    })
+    /*
+       wx.reLaunch({
+         url: '../index/index',
+       })
+   
+      
+       wx.redirectTo({
+         url: '../failed/failed',
+       })
+       */
   },
 
   radioChange: function () {

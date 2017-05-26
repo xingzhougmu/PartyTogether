@@ -65,7 +65,12 @@ Page({
   },
 
   btn_return: function () {
+    /*
     wx.redirectTo({
+      url: '../index/index',
+    })
+    */
+    wx.reLaunch({
       url: '../index/index',
     })
   },
