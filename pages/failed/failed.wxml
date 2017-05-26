@@ -1,0 +1,11 @@
+<!--failed.wxml-->
+<view class="banner">
+  <image class="img-banner" src="{{fail_mark}}" style="height:120px" mode="{{mode}}"></image>
+</view>
+<view class="welcome-label">
+  <label>提交失败,请重新提交！</label>
+</view>
+
+<view class="btn-area flex-wrp">
+  <button class="button" type="primary" bindtap="btn_return">返回</button>
+</view>

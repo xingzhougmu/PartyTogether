@@ -11,7 +11,7 @@
             <label class="info-title" style="display: flex;flex-direction:row;">姓名：</label>
           </view>
           <view class="flex-item">
-            <input class="input" name="input_name" placeholder="please input here" type="text" auto-focus required/>
+            <input class="input" name="input_name" placeholder="please input here" type="text" auto-focus required confirm-type="done" />
           </view>
         </view>
       </view>
@@ -22,7 +22,7 @@
             <label class="info-title">电话：</label>
           </view>
           <view class="flex-item">
-            <input class="input" name="input_phone" placeholder="please input here" type="number" auto-focus required/>
+            <input class="input" name="input_phone" placeholder="please input here" type="number" auto-focus required maxlength="11" confirm-type="done" />
           </view>
         </view>
       </view>

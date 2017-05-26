@@ -3,4 +3,21 @@
   background-color:#FFF;
   margin: auto;
   display: block;
+  padding-top: 50px;
+}
+
+.welcome-label{
+  padding-top: 10px;
+  padding-left: 20px;
+  font-weight: bold;
+  font-family: 宋体;
+  font-size: 26;
+}
+
+.text-label{
+  padding-top: 5px;
+  padding-left: 50px;
+  font-weight: bold;
+  font-family: 宋体;
+  font-size: 26;
 }
