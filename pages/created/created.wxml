@@ -1,7 +1,7 @@
 <!--Created.wxml-->
 <view class="created">
   <view class="banner section">
-    <image class="img-banner" src="{{check_mark}}" mode="{{mode}}"></image>
+    <image class="img-banner" src="{{complete}}" mode="{{mode}}"></image>
   </view>
   <view class="welcome-label section">
     <label>{{submit_name}}，感谢您的参与，我们7月母校见！</label>
