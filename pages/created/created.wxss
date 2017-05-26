@@ -1,23 +1,27 @@
 /* Created.wxss */
+.created .section {
+  padding-bottom: 25px;
+}
+
 .img-banner{
   background-color:#FFF;
   margin: auto;
   display: block;
   padding-top: 50px;
+  height:120px;
 }
 
 .welcome-label{
-  padding-top: 10px;
-  padding-left: 20px;
+  width: 100vw;
+  text-align: center;
   font-weight: bold;
   font-family: 宋体;
-  font-size: 26;
+  font-size: 15px;
 }
 
-.text-label{
-  padding-top: 5px;
-  padding-left: 50px;
-  font-weight: bold;
-  font-family: 宋体;
-  font-size: 26;
+.btn-area {
+  text-align: center;
+  width: 90vw;
+  margin: auto;
+  font-size: 15px;
 }
