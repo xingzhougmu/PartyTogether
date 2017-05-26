@@ -1,6 +1,28 @@
 <!--Created.wxml-->
 <view class="banner">
-  <image class="img-banner" src="{{sub_ok}}" mode="{{mode}}"></image>
+  <image class="img-banner" src="{{check_mark}}" style="height:120px" mode="{{mode}}"></image>
+</view>
+<view class="welcome-label">
+  <label>{{submit_name}},提交成功！</label>
+</view>
+<view class="text-label">
+  <label>感谢您的参与，我们7月母校见！</label>
+</view>
+<view class="btn-area flex-wrp">
+  <button class="button" type="primary" bindtap="btn_confirm">确定</button>
+</view>
+
+<!--
+<view class="welcome">
+  <image class="img-banner" src="{{welcome_msg}}" style="height:120px" mode="{{mode}}"></image>
+</view>
+-->
+
+
+
+<!--
+<view class="text-label">
+  <label>感谢您的参与，我们期待与您相见！</label>
 </view>
 <view class="page-body">
   <view class="page-section page-section-gap">
@@ -8,3 +30,4 @@
     </map>
   </view>
 </view>
+-->

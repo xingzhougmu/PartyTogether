@@ -2,12 +2,13 @@
   "pages":[
     "pages/index/index",
     "pages/logs/logs",
-    "pages/created/created"
+    "pages/created/created",
+    "pages/failed/failed"
   ],
   "window":{
-    "backgroundTextStyle":"light",
+    "backgroundTextStyle":"black",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "03015001, WE MISS YOU~",
     "navigationBarTextStyle":"black"
   }
 }

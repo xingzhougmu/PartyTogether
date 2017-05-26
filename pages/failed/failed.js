@@ -1,32 +1,18 @@
-// Created.js
+// failed.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    sub_ok: '../../resources/subok.png',
-    check_mark: '../../resources/check-mark.png',
-    welcome_msg: '../../resources/welcome.png',
-    mode: "aspectFit",
-    latitude: 32.035225,
-    longitude: 118.855317,
-    markers: [{
-      latitude: 32.035225,
-      longitude: 118.855317,
-      // title: 'NJUST',
-      iconPath: '../../resources/location.png'
-    }],
-    submit_name:'',
+    fail_mark: '../../resources/oops.png',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.setData({
-      submit_name: options.name
-    })
+
   },
 
   /**
@@ -76,5 +62,12 @@ Page({
    */
   onShareAppMessage: function () {
 
-  }
+  },
+
+  btn_return: function () {
+    wx.redirectTo({
+      url: '../index/index',
+    })
+  },
+
 })

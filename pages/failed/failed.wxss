@@ -1,0 +1,7 @@
+/* failed.wxss */
+.img-banner{
+  background-color:#FFF;
+  margin: auto;
+  display: block;
+  padding-top: 50px;
+}
