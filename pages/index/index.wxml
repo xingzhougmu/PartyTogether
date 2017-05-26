@@ -45,10 +45,10 @@
           <label class="radio-label Ratio：" style="display: flex" wx:for="{{items}} ">
             <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}} -->
           <label class="radio-label Ratio：" style="display: flex">
-            <radio value="2017.7.08" checked="{{date_checked}}">"2017.7.08 - 2017.7.09"</radio>
+            <radio value="2017.7.08" checked="{{date_checked}}">2017.7.08 - 2017.7.09</radio>
           </label>
           <label class="radio-label Ratio：" style="display: flex">
-            <radio value="2017.7.15">"2017.7.15 - 2017.7.16"</radio>
+            <radio value="2017.7.15">2017.7.15 - 2017.7.16</radio>
           </label>
         </radio-group>
       </view>

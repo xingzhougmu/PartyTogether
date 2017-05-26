@@ -102,8 +102,8 @@ Page({
    */
       
        wx.redirectTo({
-         //url: '../created/created',
-         url: '../failed/failed',
+         url: '../created/created',
+         // url: '../failed/failed',
        })
        
   },
