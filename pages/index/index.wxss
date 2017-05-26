@@ -10,7 +10,6 @@
 .button {
   border: 1px solid #4cae4c;
   background-color: #5cb85c;
-  border-radius: 0px;
   font-size: 15px;
   color: #FFF;
 }
@@ -67,4 +66,21 @@
 
 .switch{
   padding-left: 20px;
+}
+
+
+.error-banner {
+  background:red;
+  height:30px;
+  width:100vw;
+  position: absolute;
+  z-index: 100;
+  left: 0px;
+  top: -30px;
+  text-align: center;
+}
+
+.error-banner .error-label {
+   color: #FFF;
+   font-size: 14px;
 }
