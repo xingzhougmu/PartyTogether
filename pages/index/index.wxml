@@ -1,7 +1,4 @@
 <!--index.wxml-->
-<view class="error-banner" animation="{{animationData}}">
-  <label class="error-label">{{errorMessage}}</label>
-</view>
 <view class="banner">
   <image class="img-banner" src="{{logo}}" mode="{{mode}}"></image>
 </view>
