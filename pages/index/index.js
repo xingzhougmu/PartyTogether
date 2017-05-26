@@ -13,8 +13,6 @@ Page({
     will_attend: true,
     date_checked: true,
     input_name: '',
-    errorMessage : '',
-    animationData: {}
   },
 
   //事件处理函数
@@ -44,16 +42,7 @@ Page({
       url:'create_photo'
     })
     **********************/
-    if (e.detail.value.input_name == "" || e.detail.value.input_phone== "") {
-      this.showErrorMessage("请填写姓名和电话！");
-      return;
-    }
-    
-    wx.showToast({
-      title: '正在提交...',
-      icon: 'loading',
-      duration: 10000
-    })
+
     wx.request({
       url: 'https://partytogetherbackend.azurewebsites.net/api/party',
       data:
@@ -76,18 +65,24 @@ Page({
           })
         }
         else if (resMsg == "failed") {
-          _this.showErrorMessage("保存失败，请重试！");
+          wx.redirectTo({
+            url: '../created/created?name=Failed',
+          })
         }
         else {
           // undefined error happened!
         }
       },
       fail: function () {
-        _this.showErrorMessage("保存失败，请重试！");
+        // fail
+        /*
+        wx.redirectTo({
+          url: '../created/created?name=' + e.detail.value.input_name,
+        })
+        */
       },
       complete: function () {
         // complete
-        wx.hideToast();
       }
     })
   },
@@ -104,37 +99,17 @@ Page({
        wx.reLaunch({
          url: '../index/index',
        })
-   
+   */
       
        wx.redirectTo({
+         //url: '../created/created',
          url: '../failed/failed',
        })
-       */
+       
   },
 
   radioChange: function () {
     console.log('radio 发生了change事件')
 
-  },
-
-  showErrorMessage : function(message) {
-    this.setData({
-      errorMessage : message
-    });
-    var animation = wx.createAnimation({
-      duration: 1000,
-      timingFunction: 'ease',
-    })
-    this.animation = animation
-    animation.translateY(30).step()
-    this.setData({
-      animationData: animation.export()
-    })
-    setTimeout(function () {
-      animation.translateY(-30).step()
-      this.setData({
-        animationData: animation.export()
-      })
-    }.bind(this), 3000)
   }
 })
