@@ -40,6 +40,7 @@
 
 .radio-group .radio-label {
    line-height: 35px;
+   padding-left: 25px;
 }
 
 .btn-area {
@@ -62,4 +63,8 @@
   margin: auto;
   display: block;
   height: 110px;
+}
+
+.switch{
+  padding-left: 20px;
 }

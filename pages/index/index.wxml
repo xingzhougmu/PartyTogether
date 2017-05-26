@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="banner">
-  <image class="img-banner" src="{{src}}" mode="{{mode}}"></image>
+  <image class="img-banner" src="{{logo}}" mode="{{mode}}"></image>
 </view>
 <view class="main">
   <form bindsubmit="formSubmit" bindreset="formReset">
@@ -28,16 +28,33 @@
       </view>
 
       <view class="section">
-        <label class="info-title">聚会日期：</label>
+        <view class="flex-wrp" style="display: flex;flex-direction:row;">
+          <view class="flex-item">
+            <label class="info-title">是否出席：</label>
+          </view>
+          <view class="switch">
+            <switch name="input_attend" checked="{{will_attend}}" bindchange="attend_switch" />
+          </view>
+        </view>
+      </view>
+
+      <view class="section">
+        <label class="info-title">日期：</label>
         <radio-group name="input_date" class="radio-group" bindchange="radioChange">
-          <label class="radio-label Ratio：" style="display: flex" wx:for="{{items}}">
-            <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}}
+          <!--
+          <label class="radio-label Ratio：" style="display: flex" wx:for="{{items}} ">
+            <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}} -->
+          <label class="radio-label Ratio：" style="display: flex">
+            <radio value="2017.7.15" checked="{{date_checked}}">"2017.7.15 - 2017.7.16"</radio>
+          </label>
+          <label class="radio-label Ratio：" style="display: flex">
+            <radio value="2017.7.15">"2017.7.22 - 2017.7.23"</radio>
           </label>
         </radio-group>
       </view>
 
       <view class="section">
-        <label class="info-title">聚会地点：</label>
+        <label class="info-title">地点：</label>
         <label>南京理工大学</label>
       </view>
     </view>
