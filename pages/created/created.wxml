@@ -6,10 +6,13 @@
   <view class="welcome-label section">
     <label>{{submit_name}}，感谢您的参与，我们7月母校见！</label>
   </view>
+  <!--
   <view class="btn-area section">
     <button class="button" type="primary" bindtap="btn_confirm">确定</button>
   </view>
+  -->
 </view>
+
 <!--
 <view class="welcome">
   <image class="img-banner" src="{{welcome_msg}}" style="height:120px" mode="{{mode}}"></image>
