@@ -105,14 +105,14 @@ Page({
           })
         }
         else if (resMsg == "failed") {
-          this.showErrorMessage("保存失败，请重试！");
+          _this.showErrorMessage("保存失败，请重试！");
         }
         else {
           // undefined error happened!
         }
       },
       fail: function () {
-        this.showErrorMessage("保存失败，请重试！");
+        _this.showErrorMessage("保存失败，请重试！");
       },
       complete: function () {
         // complete
