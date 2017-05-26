@@ -10,12 +10,43 @@ Page({
     ],
     logo: '../../resources/logo.png',
     mode: "aspectFit",
+    // pickerHidden: true,
+    // chosen: '',
     will_attend: true,
     date_checked: true,
     input_name: '',
+    errorMessage : '',
+    animationData: {}
+  },
+  //事件处理函数
+  /*
+  pickerConfirm: function (e) {
+    this.setData({
+      pickerHidden: true
+    })
+    this.setData({
+      chosen: e.detail.value
+    })
   },
 
-  //事件处理函数
+  pickerCancel: function (e) {
+    this.setData({
+      pickerHidden: true
+    })
+  },
+
+  pickerShow: function (e) {
+    this.setData({
+      pickerHidden: false
+    })
+  },
+
+  bindViewTap: function () {
+    wx.navigateTo({
+      url: '../logs/logs'
+    })
+  },
+*/
   onLoad: function () {
     console.log('onLoad')
     var that = this
@@ -42,7 +73,16 @@ Page({
       url:'create_photo'
     })
     **********************/
-
+    if (e.detail.value.input_name == "" || e.detail.value.input_phone== "") {
+      this.showErrorMessage("请填写姓名和电话！");
+      return;
+    }
+    
+    wx.showToast({
+      title: '正在提交...',
+      icon: 'loading',
+      duration: 10000
+    })
     wx.request({
       url: 'https://partytogetherbackend.azurewebsites.net/api/party',
       data:
@@ -65,24 +105,18 @@ Page({
           })
         }
         else if (resMsg == "failed") {
-          wx.redirectTo({
-            url: '../created/created?name=Failed',
-          })
+          _this.showErrorMessage("保存失败，请重试！");
         }
         else {
           // undefined error happened!
         }
       },
       fail: function () {
-        // fail
-        /*
-        wx.redirectTo({
-          url: '../created/created?name=' + e.detail.value.input_name,
-        })
-        */
+        _this.showErrorMessage("保存失败，请重试！");
       },
       complete: function () {
         // complete
+        wx.hideToast();
       }
     })
   },
@@ -94,22 +128,36 @@ Page({
       date_checked: true,
       will_attend: true,
     })
-
-    /*
-       wx.reLaunch({
-         url: '../index/index',
-       })
-   */
-      
-       wx.redirectTo({
-         url: '../created/created',
-         // url: '../failed/failed',
-       })
-       
+/*
+    wx.redirectTo({
+      url: '../failed/failed',
+    })
+    */
   },
 
   radioChange: function () {
     console.log('radio 发生了change事件')
 
+  },
+
+  showErrorMessage : function(message) {
+    this.setData({
+      errorMessage : message
+    });
+    var animation = wx.createAnimation({
+      duration: 1000,
+      timingFunction: 'ease',
+    })
+    this.animation = animation
+    animation.translateY(30).step()
+    this.setData({
+      animationData: animation.export()
+    })
+    setTimeout(function () {
+      animation.translateY(-30).step()
+      this.setData({
+        animationData: animation.export()
+      })
+    }.bind(this), 3000)
   }
 })
