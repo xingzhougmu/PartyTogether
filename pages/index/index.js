@@ -109,6 +109,7 @@ Page({
         }
         else {
           // undefined error happened!
+          _this.showErrorMessage("未知错误，请重试！");
         }
       },
       fail: function () {
@@ -140,6 +141,7 @@ Page({
 
   },
 
+/*
   showErrorMessage : function(message) {
     this.setData({
       errorMessage : message
@@ -160,4 +162,26 @@ Page({
       })
     }.bind(this), 3000)
   }
+  */
+  // 添加CSS 特效
+  showErrorMessage: function (message) {
+    this.setData({
+      errorMessage: message
+    });
+    var animation = wx.createAnimation({
+      duration: 1000,
+      timingFunction: 'ease',
+    })
+    this.animation = animation
+    animation.height(30).opacity(1).step()
+    this.setData({
+      animationData: animation.export()
+    })
+    setTimeout(function () {
+      animation.height(0).opacity(0).step()
+      this.setData({
+        animationData: animation.export()
+      })
+    }.bind(this), 3000)
+  } 
 })

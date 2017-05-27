@@ -69,6 +69,7 @@
 }
 
 
+/*
 .error-banner {
   background:red;
   height:30px;
@@ -83,4 +84,25 @@
 .error-banner .error-label {
    color: #FFF;
    font-size: 14px;
+   line-height: 30px;
 }
+*/
+
+/* 添加CSS 特效 */
+.error-banner {
+  background:red;
+  height:0px;
+  width:100vw;
+  position: fixed;
+  z-index: 100;
+  left: 0px;
+  top: 0px;
+  text-align: center;
+  opacity: 0;
+}
+
+.error-banner .error-label {
+   color: #FFF;
+   font-size: 14px;
+   line-height:30px;
+} 
